@@ -52,6 +52,8 @@ if [ ! -d $PHP_PATH ]; then
   curl --silent --max-time 60 --location $PHP_URL | tar xz
 fi
 
+pacman -S php-pear
+
 pecl install Imagick
 
 # update config files
