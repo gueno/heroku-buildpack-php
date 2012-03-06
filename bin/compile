@@ -52,9 +52,9 @@ if [ ! -d $PHP_PATH ]; then
   curl --silent --max-time 60 --location $PHP_URL | tar xz
 fi
 
-yum install php-pear*
+apt-get install libc6 mysql-common zlib1g
 
-pecl install Imagick
+/app/php/bin/pecl install imagick
 
 # update config files
 cp $LP_DIR/conf/httpd.conf $APACHE_PATH/conf
